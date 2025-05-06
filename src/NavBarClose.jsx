@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './assets/logo-photoroom.svg'
+import logo from './assets/logo-Photoroom.svg'
 import minus from './assets/minus.png'
 import remove from './assets/remove.png'
 import twitter from './assets/twitter.png'
@@ -10,7 +10,7 @@ import mail from './assets/mail.png'
 import hireme from './assets/hire.png'
 import { Link } from 'react-router-dom'
 import './navClose.css'
-function NavBarClose() {
+function NavbarClose() {
 return (
   <div className='text-animation'>
 <div  className='Another'>
@@ -67,4 +67,4 @@ return (
   )
 }
 
-export default NavBarClose
+export default NavbarClose
