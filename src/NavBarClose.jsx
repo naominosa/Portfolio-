@@ -7,6 +7,7 @@ import linkedin from './assets/linkedin.png'
 import instagram from './assets/instagram.png'
 import mail from './assets/mail.png'
 import hireme from './assets/hire.png'
+import logo from './assets/logo.svg'
 import { Link } from 'react-router-dom'
 import './navClose.css'
 function NavbarClose() {
