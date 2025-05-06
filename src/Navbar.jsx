@@ -1,6 +1,5 @@
 import React from 'react'
 import './Navbar.css'
-// import Button from './button'
 import logo from './assets/logo-photoroom.svg'
 import minus from './assets/minus.png'
 import hireme from './assets/hire.png'

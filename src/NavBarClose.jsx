@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from './assets/logo.svg'
 import minus from './assets/minus.png'
 import remove from './assets/remove.png'
 import twitter from './assets/twitter.png'
