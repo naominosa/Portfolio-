@@ -1,0 +1,24 @@
+.work-container{
+    background-color: #fff0f5;
+    position: fixed;
+    height: 80vh;
+    width: 90%;
+    padding: 2em;
+
+
+}
+
+.container{
+    z-index: 1000;
+    /* margin-top: 2em; */
+
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+.first-text{
+    position: fixed;
+    top: 4em; /* offset for navbar height */
+
+    margin-top: 5em;
+}

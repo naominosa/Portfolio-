@@ -5,6 +5,7 @@ import NavbarClose from './NavBarClose';
 import WorkScreen from './WorkScreen';
 
 function App() {
+  alert('Still Under Production!')
 
   return (
  <>

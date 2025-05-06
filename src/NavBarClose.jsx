@@ -46,7 +46,7 @@ return (
 
           <div className='grouplinks'>
           <div className='headerlinks'>
-               <li><Link className='links' to="#"> Home  </Link>  <li> My approach to development</li></li>
+               <li><Link className='links' to="/FirstScreen"> Home  </Link>  <li> My approach to development</li></li>
                <li><Link className='links' to="/WorkScreen"> Work  </Link>  <li> A little about my background</li></li>
                <li><Link className='links' to="#"> About </Link> <li>A little about me and my background.</li> </li>
                <li><Link className='links' to="#"> Writing</Link> <li>My latest writing on tech and language</li></li>
