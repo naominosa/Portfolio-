@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import logo from './assets/logo-photoroom.svg'
+import logo from './assets/logo.svg'
 import minus from './assets/minus.png'
 import hireme from './assets/hire.png'
 // import { useState } from 'react'
