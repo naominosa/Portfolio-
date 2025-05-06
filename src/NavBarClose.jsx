@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './assets/logo-Photoroom.svg'
+import logo from './assets/logo.svg'
 import minus from './assets/minus.png'
 import remove from './assets/remove.png'
 import twitter from './assets/twitter.png'
@@ -20,7 +20,7 @@ return (
       <img className='logo' src={logo}  style={{height:'70px'}} alt='logo'/>
       <img className='minus' src={minus} alt="minus" />
       <Link className='btn' to="/FirstScreen"> 
-              <h3  > Close</h3>
+              <h3> Close</h3>
      </Link>
 
       </div>
@@ -46,10 +46,10 @@ return (
 
           <div className='grouplinks'>
           <div className='headerlinks'>
-               <li><Link className='links' to="Home"> Home  </Link>  <li> My approach to development</li></li>
+               <li><Link className='links' to="#"> Home  </Link>  <li> My approach to development</li></li>
                <li><Link className='links' to="/WorkScreen"> Work  </Link>  <li> A little about my background</li></li>
-               <li><Link className='links' to="About"> About </Link> <li>A little about me and my background.</li> </li>
-               <li><Link className='links' to="Writing"> Writing</Link> <li>My latest writing on tech and language</li></li>
+               <li><Link className='links' to="#"> About </Link> <li>A little about me and my background.</li> </li>
+               <li><Link className='links' to="#"> Writing</Link> <li>My latest writing on tech and language</li></li>
              </div>
          
           </div>
