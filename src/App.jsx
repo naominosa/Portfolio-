@@ -11,7 +11,7 @@ function App() {
   <Routes>
         <Route path="/" element={<Firstscreen />} /> 
         <Route path="/FirstScreen" element={<Firstscreen />} /> 
-        <Route path="/NavBarclose" element={<NavBarClose />} /> 
+        <Route path="/Navbarclose" element={<NavBarClose />} /> 
         <Route path='/WorkScreen'element={<WorkScreen/>}/>
 
       </Routes>
