@@ -1,0 +1,30 @@
+.nav-container{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   font-family: "Zilla Slab", serif;
+
+}
+.header-icons{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 1em;
+}
+.grouplinks{
+    display: flex;
+    padding: 1em;
+}
+.links {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 3.5em;
+    color: #252525;
+   font-family: "Zilla Slab", serif;
+   font-weight: 800;
+
+}
+.links:hover{
+    color: rgba(223, 72, 202, 0.422);
+}

@@ -1,0 +1,51 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    padding-left: 2em;
+    margin-top: 7em;
+    display: flex;
+    background-color:rgba(255, 105, 180, 0.105);
+    width: 90%;
+    align-items: center;
+    border-radius:4em;
+    justify-content: space-between;
+    position:fixed;
+    z-index: 1000;
+}
+
+.logo-container{  
+    height: 5em;
+    display: flex;
+    align-items: center;
+    width: 6em;
+}
+.minus{
+    position: relative;
+    left: -10%;
+    height: 18em;
+    width: 2em;
+}
+.icons{
+    height: 30px;
+}
+.header-icons{
+    display: flex;
+}
+li{
+   font-family: "Zilla Slab", serif;
+   font-size: 1.2em;
+    list-style: none;
+}
+.rightheader-image{
+    padding-right: 2em;
+}
+.btn{
+    text-decoration: none;
+    color: #252525;
+    font-size: 1.5em;
+}
+

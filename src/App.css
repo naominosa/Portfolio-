@@ -1,0 +1,215 @@
+*{
+  scroll-padding-top: 60px; /* height of your fixed navbar */
+  scroll-behavior: smooth;
+}
+img {
+  transform-style: preserve-3d;
+}
+.Another{
+  overflow-x: hidden;
+  padding: 1em;
+  background-attachment: fixed;
+
+}
+.dash{
+  width: 5em;
+
+}
+.anime{
+  width: 1em;
+}
+.second{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  height: fit-content;
+  width: 30em;
+  padding: 1em;
+}
+.second p{
+  font-family: "Zilla Slab", serif;
+  line-height: 1em;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+margin: 0;
+}
+.second h1{
+  font-family: "Zilla Slab", serif;
+font-weight: 700;
+margin: 0;
+font-size: 5em;
+}
+.Upper-Overlay{
+  width: 100%;
+  background-attachment: fixed;
+  background-color: rgba(255, 105, 180, 0.105);
+  height:auto;
+  
+}
+.overlay{
+  padding-top: 5em;
+  display: flex;
+flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.header-text{
+  max-width: 40em;
+  padding: 3em;
+}
+.header-text h1{
+   font-family: "Zilla Slab", serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 5em;
+}
+.header-text p{
+  font-family: "Zilla Slab", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2em;
+}
+.header-text b{
+  font-family: "Zilla Slab", serif;
+  font-weight: 1000;
+  font-style: normal;
+}
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.15em solid rgba(194, 3, 152, 0.626);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+  width: 0;
+  font-family: "Zilla Slab", serif;
+  font-size: 1.2em;
+  animation: typing 2s steps(13, end) infinite,
+             blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0 }
+  50% { width: 100% }
+  100% { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+.text-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animation{
+  display: flex;
+  justify-content: center;
+}
+.buttons{
+  width: 50px;
+  padding-top: 2em;
+}
+.button{
+  border:2px solid palevioletred;
+  background-image: url('./assets/stripes.jpg');
+  width: 15em;
+  height: 3em;
+  font-family: "Zilla Slab", serif;
+  font-weight: 700;
+font-size: 1.15em;
+display: inline-block;
+  color: white;
+  transition: all 0.6s ease;
+}
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  background: white;
+  opacity: 0.1;
+  transition:ease-in-out all 0.6s;
+}
+.button:hover::before {
+  left: 0;
+}
+.button:hover {
+  
+  transform: rotate(10deg);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  color: black;
+  background: rgba(175, 39, 237, 0.4);
+}
+
+.dots-image{
+width: 40%;
+height: 9em;
+background-image: url('./assets/Slide1-Photoroom.jpg');
+background-repeat: repeat-x;
+background-size: contain;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.dots-image:hover{
+  animation: float 2s ease-in-out infinite;
+
+}
+.dots-texts h1{
+  font-family: "Zilla Slab", serif;
+  font-weight: 600;
+  margin: 0;
+  font-size: 3em;
+}
+.dots-texts p{
+  font-family: "Zilla Slab", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1em;
+  width: 25em;
+}
+.dots-container{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  height: 60vh;
+}
+.notes-animation img{
+  height: 13em;
+}
+.notes-container{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 90vh;
+  align-items: center;
+  /* padding: 1em; */
+  justify-content: space-around;
+}
+.notes-texts{
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+  width: 35em;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+}
+.footer p{
+  font-family: "Cinzel", serif;
+  font-weight: bolder;
+
+}
