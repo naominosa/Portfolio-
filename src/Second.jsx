@@ -8,7 +8,7 @@ import Developer from './assets/Animation - 1746423316847 (1).gif'
 import Navigate from './assets/brand-loyalty-concept-illustration.png'
 function Second() {
   return (
-
+  
     <div className='text-animation'>
 <div className='second'>
       <h1>Let's work together <img className='anime' src={anime} alt="" /> </h1>
@@ -63,9 +63,7 @@ function Second() {
     />
 
    </div>
-   <div className="footer">
-   <p>&copy; 2025.by nosanaomi</p>
-   </div>
+   
      </div>
     
   )

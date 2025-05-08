@@ -1,24 +1,60 @@
 .work-container{
-    background-color: #fff0f5;
-    position: fixed;
-    height: 80vh;
-    width: 90%;
-    padding: 2em;
-
+    overflow-x: hidden;
+    padding: 1em;
+    background-attachment: fixed;
+    width: 100%;
 
 }
 
-.container{
-    z-index: 1000;
-    /* margin-top: 2em; */
+.flowing{
+    width: 100%;
+  background-attachment: fixed;
+  background-color: rgba(255, 105, 180, 0.105);
+  height:100%;
+  overflow: hidden;
 
-    display: flex;
-    justify-content: center;
-    padding-top: 1em;
 }
 .first-text{
-    position: fixed;
-    top: 4em; /* offset for navbar height */
+  padding: 2em;
 
-    margin-top: 5em;
+}
+.heading{
+    font-family: "Zilla Slab", serif;
+    font-weight: 700;
+    font-size: 5em;
+    margin: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+.h1-texts{
+padding-top: 10em;
+display: flex;
+align-items: center;
+}
+.dots{
+    padding-top: 3em;
+    padding-right: 2em;
+    width: 3em;
+}
+
+.line{
+    width: 6em;
+    height:4em;
+    margin-top: -2em;
+}
+.p-text p{
+ font-family: "Zilla Slab", serif;
+  line-height: 1em;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+margin: 0;
+}
+.para{
+    width:60em;
+}
+.underlined{
+    border-bottom:  5px dashed palevioletred ;
 }

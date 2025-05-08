@@ -16,6 +16,9 @@ function App() {
         <Route path='/WorkScreen'element={<WorkScreen/>}/>
 
       </Routes>
+      <div className="footer">
+   <p>&copy; 2025.by nosanaomi</p>
+   </div>
  </>
     
    

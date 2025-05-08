@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom'
 import Button from './button'
 import Border from './Border'
 
-function Components({heading,paragraph,boldText,image,buttontext}) {
+function Components({heading,paragraph,boldText,image,buttontext,paragraphs}) {
   return (
     <div>
         <div className="notes-container">
       <div className="notes-texts">
       <h1>{heading}</h1>
-      <p>{paragraph}</p>
+      <p>{paragraph }  </p>
+      {/* <br /> */}
+      <p>{paragraphs}  </p>
+
       <b>{boldText}</b>
 <div  className='buttons'>
 <Link  to="Home"> 

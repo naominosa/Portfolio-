@@ -1,0 +1,55 @@
+.text-component{
+    width: 40em;
+    text-align: left;
+    padding: 2em;
+}
+.overall{
+    display: flex;
+padding-top: 5em;
+align-items: center;
+}
+.head{
+    font-family: "Zilla Slab", serif;
+  font-weight: 600;
+  margin: 0;
+  font-size: 3em;
+}
+.text-component p{
+    font-family: "Zilla Slab", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2em;
+  width: 30em;
+}
+.image{
+    width: 30em;
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .image:hover{
+    animation: float 2s ease-in-out infinite;
+  
+  }
+#flip{
+display: flex;
+flex-direction: row-reverse;
+}
+.love{
+    background-image: url('./assets/love.png');
+    background-position: left;
+    background-size: 3.5em;
+    
+}
+.love:hover{
+    animation: float 2s ease-in-out infinite;
+  
+  }
+  .love h1{
+    font-size: 3em;
+    margin: 0;
+  }
+  
