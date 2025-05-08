@@ -1,0 +1,9 @@
+.Scroll{
+padding-left: 8em;
+height: 10em;
+}
+.bow{
+    background-size:3.5em;
+    background-repeat: repeat;
+    background-image: url('./assets/love.png');
+}
