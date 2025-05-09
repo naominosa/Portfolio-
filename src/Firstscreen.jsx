@@ -8,7 +8,7 @@ function Firstscreen() {
   return (
     <div>
  <div className='Another'>
-<div className='Upper-Overlay'>
+<div className='UpperOverlay'>
   <div className="layed">
   <div className='nav'>
     <Navbar/>

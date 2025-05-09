@@ -61,6 +61,8 @@ function WorkScreen() {
         paragraph='I believe that what we create as developers matters  not just how it works or looks, but the impact it has on people and the planet. I aim to approach every project with a sense of responsibility, and I try to make ethical choices about the work I take on.    ' 
         paragraphs='If your project involves things like online gambling, payday lending, tobacco, or business models that exploit personal data, I’m not the right fit. I also steer clear of crypto-based projects for now  mainly because of the environmental cost. I’m not against emerging tech, but until it becomes genuinely sustainable (beyond just offsets), it’s not something I feel comfortable contributing to.'
         boldText='On the flip side, if you’re working on something that supports sustainability, inclusion, or creates positive change I’d love to be part of it.'
+    link= 'mailto:naominosa296@gmail.com'
+      
         buttontext='Say Hi!'
         />
       </div>

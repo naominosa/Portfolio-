@@ -14,7 +14,7 @@ function NavbarClose() {
 return (
   <div className='text-animation'>
 <div  className='Another'>
-   <div className='Upper-Overlay' >
+   <div className='UpperOverlay' >
     <div className="nav-container">
     <div className="logo-container">
       <img className='logo' src={logo}  style={{height:'70px'}} alt='logo'/>
@@ -36,11 +36,12 @@ return (
           <Link className='btn' to="/FirstScreen"> 
           <span ><img  src={remove} alt="" /></span>
      </Link>
-          <span><img className='icons' src={twitter} alt="" /></span>
-          <span><img className='icons' src={github} alt="" /></span>
-          <span><img className='icons' src={instagram} alt="" /></span>
-          <span><img className='icons' src={mail} alt="" /></span>
-          <span><img className='icons' src={linkedin} alt="" /></span>
+     <a href="https://x.com/naominosa" target="_blank"><span><img className='icons' src={twitter} alt="" /></span></a>
+     <a href="https://github.com/naominosa" target="_blank"><span><img className='icons' src={github} alt="" /></span></a>
+     <a href=" https://www.instagram.com/naominosa/"target="_blank"><span><img className='icons' src={instagram} alt="" /></span></a>
+     <a href="mailto:naominosa296@gmail.com?subject=Hello&body=I wanted to reach out to you about..."><span><img className='icons' src={mail} alt="" /></span></a>
+     <a href="https://www.linkedin.com/in/naomi-nosa/"target="_blank"><span><img className='icons' src={linkedin} alt="" /></span></a>
+
           </div>
           </div>
 

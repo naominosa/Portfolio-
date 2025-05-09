@@ -8,6 +8,7 @@ import './AboutMeScreen.css'
 import WorkScreenText from './workScreenText'
 import random from './assets/random-Photoroom.png'
 import Lang from './assets/lang-Photoroom.png'
+import PicturesOfMe from './PicturesOfMe'
 function AboutMeScreen() {
   return (
               <div className='container' >
@@ -65,6 +66,11 @@ function AboutMeScreen() {
            ParagraphText='When I’m not immersed in code, I’m diving into the intricate patterns of human speech. Language fascinates me not just the words themselves, but the cognitive processes behind how we learn and use them. I’m always picking up bits of new tongues; if I can’t say “hello” in a language yet, it’s only a matter of time.'
            ParagraphTextTwo='Recently, my interest has shifted toward how technology and linguistics intersect. Rather than seeing Natural Language Processing used mainly for algorithms that sell us things, I’m exploring its potential to support language learners like myself. French is my latest challenge let’s see where it takes me.'
            />
+         </div>
+
+         <div>
+         <h2 className='custom' style={{ textAlign: 'center' }}>Here Are Some Picture Of me Having Fun!</h2>
+          <PicturesOfMe/>
          </div>
         </div>
     </div>

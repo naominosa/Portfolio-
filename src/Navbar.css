@@ -16,7 +16,7 @@
     position:fixed;
     z-index: 1000;
 }
-
+    
 .logo-container{  
     height: 5em;
     display: flex;
@@ -48,4 +48,15 @@ li{
     color: #252525;
     font-size: 1.5em;
 }
+@media (max-width: 768px) {
+   .navbar{
+    width: 80%;
+    justify-content:flex-start;
 
+   }
+   .rightheader-image{
+    display: none;
+   }
+  
+  }
+  

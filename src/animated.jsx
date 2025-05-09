@@ -1,34 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import cartoon from './assets/Photoroom.png'; // Your cartoon image
+import './animatedImage.css'; // Import the CSS file
 
-// Blinking eye component with tracking
-const Eye = ({ style }) => {
+const AnimatedImage = () => {
+  const [isHovered, setIsHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isBlinking, setIsBlinking] = useState(false);
-  
+
+  const leftEyeRef = useRef(null);
+  const rightEyeRef = useRef(null);
+
+  // Track mouse movement
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);
-    
-    // Set up random blinking with slower timing
+
     const blinkInterval = setInterval(() => {
       setIsBlinking(true);
-      setTimeout(() => setIsBlinking(false), 300); // Duration of blink increased from 200ms to 350ms
-    }, Math.random() * 4000 + 6000); // Random interval between 6-10 seconds
-    
+      setTimeout(() => setIsBlinking(false), 300); // Blink duration
+    }, Math.random() * 4000 + 6000); // Random interval: 6-10 seconds
+
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       clearInterval(blinkInterval);
     };
   }, []);
-  
-  // Constrain pupil inside eye
-  const getPupilOffset = () => {
-    const dx = mousePos.x - (style.left + 25); // 25 is half eye width
-    const dy = mousePos.y - (style.top + 15);  // 15 is half eye height
+
+  // Pupil movement logic
+  const getPupilOffset = (eyeRef) => {
+    if (!eyeRef.current) return { x: 0, y: 0 };
+
+    const rect = eyeRef.current.getBoundingClientRect();
+    const eyeCenterX = rect.left + rect.width / 2;
+    const eyeCenterY = rect.top + rect.height / 2;
+
+    const dx = mousePos.x - eyeCenterX;
+    const dy = mousePos.y - eyeCenterY;
     const angle = Math.atan2(dy, dx);
     const radius = 5; // how far pupil can move
     return {
@@ -36,149 +46,119 @@ const Eye = ({ style }) => {
       y: radius * Math.sin(angle),
     };
   };
-  
-  const pupil = getPupilOffset();
-  
+
+  const leftPupil = getPupilOffset(leftEyeRef);
+  const rightPupil = getPupilOffset(rightEyeRef);
+
   return (
-    <div style={{ position: 'absolute', ...style, width: 50, height: 30 }}>
-      <svg width="50" height="30">
-        {isBlinking ? (
-          // Closed eye (just a line when blinking)
-          <motion.path 
-            d="M 5 15 Q 25 25, 45 15" 
-            fill="none" 
-            stroke="black" 
-            strokeWidth="2" 
-          />
-        ) : (
-          // Open eye
-          <>
-        <path
-  d="M0,20 Q25,0 50,20 Q25,40 0,20"
-  fill="white"
-  stroke="black"
-  strokeWidth="2"
-/>
-<motion.circle
-  cx={25 + pupil.x}
-  cy={20 + pupil.y}
-  r="7"
-  fill="black"
-  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-/>
-
-
-          </>
-        )}
-      </svg>
-    </div>
-  );
-};
-
-const AnimatedImage = () => {
-  const [hasEntered, setHasEntered] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  
-  // Breathing animation variants
-  const breathingAnimation = {
-    breatheIn: {
-      scale: 1.03,
-      y: -5,
-      transition: { 
-        duration: 2,
-        ease: "easeInOut"
-      }
-    },
-    breatheOut: {
-      scale: 1,
-      y: 0,
-      transition: { 
-        duration: 2,
-        ease: "easeInOut"
-      }
-    }
-  };
-  
-  // Hover animation variants
-  const hoverAnimation = {
-    hover: { 
-      scale: 1.05,
-      y: -10,
-      transition: { duration: 0.3 }
-    },
-    normal: { 
-      scale: 1,
-      y: 0,
-      transition: { duration: 0.3 }
-    }
-  };
-  
-  return (
-    <div style={{ position: 'relative', width: '500px', height: 'auto' }}>
-      {!hasEntered && (
-        <motion.img
-          src={cartoon}
-          alt="Cartoon"
-          initial={{ scale: 0, rotate: -180, opacity: 0 }}
-          animate={{ scale: 1, rotate: 0, opacity: 1 }}
+    <div className="animated-image-container">
+      <motion.div
+        animate={isHovered ? 'hover' : 'normal'}
+        variants={{
+          hover: { scale: 1.05, y: -10, transition: { duration: 0.3 } },
+          normal: { scale: 1, y: 0, transition: { duration: 0.3 } },
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <motion.div
+          animate={['breatheIn', 'breatheOut']}
+          variants={{
+            breatheIn: {
+              scale: 1.03,
+              y: -5,
+              transition: { duration: 2, ease: 'easeInOut' },
+            },
+            breatheOut: {
+              scale: 1,
+              y: 0,
+              transition: { duration: 2, ease: 'easeInOut' },
+            },
+          }}
           transition={{
-            type: 'spring',
-            stiffness: 260,
-            damping: 20,
-            duration: 0.8,
+            duration: 4,
+            repeat: Infinity,
+            repeatType: 'reverse',
           }}
-          onAnimationComplete={() => setHasEntered(true)}
-          style={{
-            width: '500px',
-            height: 'auto',
-            transform: 'scaleX(-1)', // Flip during animation
-            position: 'absolute',
-          }}
-        />
-      )}
-      
-      {hasEntered && (
-        <div style={{ position: 'relative' }}>
-          <motion.div
-            animate={isHovered ? "hover" : "normal"}
-            variants={hoverAnimation}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <motion.div
-              animate={[
-                'breatheIn', 'breatheOut'
-              ]}
-              variants={breathingAnimation}
-              transition={{ 
-                duration: 4,
-                repeat: Infinity,
-                repeatType: 'reverse'
-              }}
-            >
-              <motion.img
-                src={cartoon}
-                alt="Cartoon"
-                style={{
-                  width: '500px',
-                  height: 'auto',
-                }}
-              />
-              {/* 👁 Left Eye */}
-              <Eye style={{ top: 180, left: 184 }} /> {/* Adjust these positions to match your image */}
-              {/* 👁 Right Eye */}
-              <Eye style={{ top: 180, left: 300 }} /> {/* Adjust as needed */}
-
-      
-            </motion.div>
-          </motion.div>
-        </div>
-      )}
+        >
+          {/* Cartoon Image */}
+          <motion.img
+            src={cartoon}
+            alt="Cartoon"
+            initial={{ scale: 0, rotate: -180, opacity: 0 }}
+            animate={{ scale: 1, rotate: 0, opacity: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 260,
+              damping: 20,
+              duration: 0.8,
+            }}
+            className="animated-image"
+          />
+          {/* Left Eye */}
+          <div ref={leftEyeRef} className="eye-container left-eye">
+            <svg className="eye" width="50" height="30">
+              {isBlinking ? (
+                <motion.path
+                  d="M5 15 Q25 25, 45 15"
+                  fill="none"
+                  stroke="black"
+                  strokeWidth="2"
+                />
+              ) : (
+                <>
+                  <path
+                    d="M0,20 Q25,0 50,20 Q25,40 0,20"
+                    fill="white"
+                    stroke="black"
+                    strokeWidth="2"
+                  />
+                  <motion.circle
+                    cx={25 + leftPupil.x}
+                    cy={20 + leftPupil.y}
+                    r="7"
+                    fill="black"
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  />
+                </>
+              )}
+            </svg>
+          </div>
+          {/* Right Eye */}
+          <div ref={rightEyeRef} className="eye-container right-eye">
+            <svg className="eye" width="50" height="30">
+              {isBlinking ? (
+                <motion.path
+                  d="M5 15 Q25 25, 45 15"
+                  fill="none"
+                  stroke="black"
+                  strokeWidth="2"
+                />
+              ) : (
+                <>
+                  <path
+                    d="M0,20 Q25,0 50,20 Q25,40 0,20"
+                    fill="white"
+                    stroke="black"
+                    strokeWidth="2"
+                  />
+                  <motion.circle
+                    cx={25 + rightPupil.x}
+                    cy={20 + rightPupil.y}
+                    r="7"
+                    fill="black"
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  />
+                </>
+              )}
+            </svg>
+          </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
 
 export default AnimatedImage;
-
 
 

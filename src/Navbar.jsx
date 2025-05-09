@@ -5,8 +5,6 @@ import minus from './assets/minus.png'
 import hireme from './assets/hire.png'
 // import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-
 function Navbar() {
   return (
 
@@ -21,6 +19,7 @@ function Navbar() {
         <h3 className='text-animation' > MENU</h3>
             </Link>
         </div>
+         
         </div>
         <div className='right-side'>
           <span className='rightheader-image'><img src={hireme} style={{ height: '60px' }} /> </span>

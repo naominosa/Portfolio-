@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Button from './button'
 import Border from './Border'
 
-function Components({heading,paragraph,boldText,image,buttontext,paragraphs}) {
+function Components({heading,paragraph,boldText,image,buttontext,paragraphs,link}) {
   return (
     <div>
         <div className="notes-container">
@@ -15,7 +15,7 @@ function Components({heading,paragraph,boldText,image,buttontext,paragraphs}) {
 
       <b>{boldText}</b>
 <div  className='buttons'>
-<Link  to="Home"> 
+<Link  to={link}> 
 <Button  className='button' buttontext={buttontext}  />
 </Link>  
       </div>

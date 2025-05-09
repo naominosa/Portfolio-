@@ -1,0 +1,76 @@
+.animated-image-container {
+    position: relative;
+    width: 500px;
+    height: auto;
+  }
+  
+  .animated-image {
+    width: 500px;
+    height: auto;
+  }
+  
+  .eye-container {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+  }
+  
+  .eye {
+    width: 50px;
+    height: 30px;
+  }
+  
+  /* Default position for the eyes (Desktop/Laptop) */
+  .left-eye {
+    top: 180px;
+    left: 184px;
+  }
+  
+  .right-eye {
+    top: 180px;
+    left: 300px;
+  }
+  
+  /* Adjustments for tablets (medium screens) */
+  @media (max-width: 1024px) {
+    .left-eye {
+      top: 150px;
+      left: 150px;
+    }
+  
+    .right-eye {
+      top: 150px;
+      left: 250px;
+    }
+  }
+  
+  /* Adjustments for mobile devices (small screens) */
+  @media (max-width: 768px) {
+    .eye-container {
+      width: 30px;
+      height: 20px;
+    }
+  
+    .eye {
+     border-radius: 5em;
+      width: 40px;
+      height: 22px;
+    }
+  
+    .left-eye {
+      top: 100px;
+      left: 275px;
+    }
+  
+    .right-eye {
+      top: 100px;
+      left: 202px;
+    }
+    .animated-image {
+        width: 300px;
+        height: auto;
+            display: block; /* Ensures the image behaves like a block for centering */
+            margin: 0 auto; /* Horizontally centers the image */
+      }
+  }
+   

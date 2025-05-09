@@ -2,9 +2,7 @@
   scroll-padding-top: 60px; /* height of your fixed navbar */
   scroll-behavior: smooth;
 }
-/* img {
-  transform-style: preserve-3d;
-} */
+
 .Another{
   overflow-x: hidden;
   padding: 1em;
@@ -12,7 +10,6 @@
 }
 .dash{
   width: 5em;
-
 }
 .anime{
   width: 1em;
@@ -38,7 +35,7 @@ font-weight: 700;
 margin: 0;
 font-size: 5em;
 }
-.Upper-Overlay{
+.UpperOverlay{
   width: 100%;
   background-attachment: fixed;
   background-color: rgba(255, 105, 180, 0.105);
@@ -114,6 +111,8 @@ flex-direction: row-reverse;
 .buttons{
   width: 50px;
   padding-top: 2em;
+
+  padding-bottom: 5em;
 }
 .button{
   border:2px solid palevioletred;
@@ -126,6 +125,7 @@ font-size: 1.15em;
 display: inline-block;
   color: white;
   transition: all 0.6s ease;
+  
 }
 .button::before {
   content: '';
@@ -196,6 +196,7 @@ background-size: contain;
   /* padding: 1em; */
   justify-content: space-around;
 }
+
 .notes-texts{
   font-family: "Zilla Slab", serif;
   font-weight: 400;
@@ -212,3 +213,65 @@ background-size: contain;
   font-weight: bolder;
 
 }
+.custom{
+  font-family: "Cinzel", serif;
+  font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  .header-text h1{
+    font-size: 2em;
+ }
+ .header-text{
+  width: 20em;
+}
+.overlay{
+   
+flex-direction: column-reverse;
+align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.header-text p{
+  font-size: 1em;
+}
+
+.scroll-animation{
+  display: none;
+ 
+}
+.second{
+  width: 20em;
+}
+.second h1{
+  font-family: "Zilla Slab", serif;
+font-weight: 700;
+margin: 0;
+font-size: 2em;
+}
+.dots-container{
+  height: 20em;
+  background-image: url('./assets/Slide1-Photoroom.jpg');
+  background-repeat:no-repeat;
+  background-size:20em;
+  align-items: normal;
+  justify-content: center;
+}
+.dots-container:hover{
+  animation: float 2s ease-in-out infinite;
+
+}
+.dots-texts h1{
+  font-size: 2em;
+  white-space: nowrap; 
+
+}
+.dots-texts p{
+  font-size: 0.9em;
+  width: 20em;
+}
+.dots-image{
+  display: none;
+}
+ }
+ 
