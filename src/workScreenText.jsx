@@ -8,7 +8,7 @@ function WorkScreenText({head,ParagraphText,ParagraphTextTwo,src,id,boldText}) {
       <p>{ParagraphText}</p>
 
 <p>{ParagraphTextTwo}</p>
-<p>
+<p>  
 <b>{boldText}</b>
 </p>
 

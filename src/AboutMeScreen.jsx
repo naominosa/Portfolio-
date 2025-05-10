@@ -19,7 +19,7 @@ function AboutMeScreen() {
         <div className='flowing'>
         <div className="navv">
          <Navbar/>
-   
+       
          </div>
          <div className="first-text">
            <div className="h1-texts">

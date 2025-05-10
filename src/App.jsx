@@ -9,7 +9,7 @@ import ColorDropdown from './colorDropdown';
 
 function App() {
   const backgroundColor = useSelector((state) => state.background.color);
-alert('still under production ')
+// alert('still under production ')
   return (
     <div style={{ backgroundColor, minHeight: '100vh', transition: 'background-color 0.3s ease-in-out' }}>
       <ColorDropdown />

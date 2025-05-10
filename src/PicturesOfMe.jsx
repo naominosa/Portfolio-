@@ -11,7 +11,7 @@ import video from './assets/video-one.mp4';
 import './MyCarousel.css'
 const MyCarousel = () => {
     return (
-        <div  style={{ maxWidth: '400px', height:'90vh', margin: '0 auto', }}>
+        <div className='contained' >
             <Carousel showThumbs={false} autoPlay infiniteLoop>
                 <div>
                     <img className='custom' src={pictureOne} alt="Slide 1" />

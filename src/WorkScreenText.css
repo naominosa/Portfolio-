@@ -52,4 +52,29 @@ flex-direction: row-reverse;
     font-size: 3em;
     margin: 0;
   }
-  
+@media (max-width: 768px) {
+  .overall{
+    flex-direction: column-reverse;
+}
+.image{
+    width: 15em;
+}
+.head{
+    white-space: nowrap;
+  font-size: 1.9em;
+}
+.text-component{
+    width: 100%;
+    text-align: left;
+    padding-right: 1.1em;
+
+}
+.text-component p{
+  font-size:16.5px;
+  width: 20em;
+}
+#flip{
+display: flex;
+flex-direction: column-reverse;
+}
+}

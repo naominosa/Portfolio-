@@ -6,4 +6,7 @@ height: 10em;
     background-size:3.5em;
     background-repeat: repeat;
     background-image: url('./assets/love.png');
-}
+}   
+@media (max-width: 768px) {
+   
+ }

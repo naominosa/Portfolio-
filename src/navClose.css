@@ -28,3 +28,8 @@
 .links:hover{
     color: rgba(223, 72, 202, 0.422);
 }
+@media (max-width: 768px) {
+.header-icons{
+    gap: 18px;
+}
+}

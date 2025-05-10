@@ -6,7 +6,11 @@
     border-radius: 10px;
     overflow: hidden;
   }
-  
+  .contained{
+       max-width: 400px;
+        height:90vh; 
+        margin: 0 auto;
+  }
   .carousel .slide img {
     width: 100%;
     height: 100vh;
@@ -19,5 +23,15 @@
     font-size: 14px;
     padding: 10px;
   }
-  
+@media (max-width: 768px) {
+ .carousel .slide img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    border-radius:15px;
+  }
+  .contained{
+    height: 55vh;
+  }
+}
   
