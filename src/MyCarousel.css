@@ -36,5 +36,8 @@
   .carousel.carousel-slider .control-arrow{
 height: 18em;
   }
+  .none{
+    display: none;
+  }
 }
   

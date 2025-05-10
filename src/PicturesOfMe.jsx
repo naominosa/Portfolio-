@@ -33,7 +33,7 @@ const MyCarousel = () => {
                 </div>
                 <div>
 
-                <video loop autoPlay muted width="100%" height="auto">
+                <video className='none' loop autoPlay muted width="100%" height="auto">
     <source src={video} type="video/mp4" />
     Your browser does not support the video tag.
 </video>
