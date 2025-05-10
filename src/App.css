@@ -242,8 +242,8 @@ align-items: center;
 }
 .second{
   width: 20em;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: left;
 
 }
 .second h1{

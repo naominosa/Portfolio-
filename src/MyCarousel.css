@@ -20,8 +20,8 @@
   
   .carousel .legend {
     background: rgba(0, 0, 0, 0.5);
-    font-size: 14px;
-    padding: 10px;
+    /* font-size: 14px;
+    padding: 10px; */
   }
 @media (max-width: 768px) {
  .carousel .slide img {
@@ -32,6 +32,9 @@
   }
   .contained{
     height: 55vh;
+  }
+  .carousel.carousel-slider .control-arrow{
+height: 18em;
   }
 }
   
