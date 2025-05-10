@@ -4,7 +4,7 @@ import Button from './button'
 import Border from './Border'
 
 function Components({heading,paragraph,boldText,image,buttontext,paragraphs,link}) {
-  return (
+  return (  
     <div>
         <div className="notes-container">
       <div className="notes-texts">

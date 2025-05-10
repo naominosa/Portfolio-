@@ -111,7 +111,6 @@ flex-direction: row-reverse;
 .buttons{
   width: 50px;
   padding-top: 2em;
-
   padding-bottom: 5em;
 }
 .button{
@@ -223,6 +222,7 @@ background-size: contain;
     font-size: 2em;
  }
  .header-text{
+  text-align: center;
   width: 20em;
 }
 .overlay{
@@ -242,6 +242,9 @@ align-items: center;
 }
 .second{
   width: 20em;
+  align-items: center;
+  justify-content: center;
+
 }
 .second h1{
   font-family: "Zilla Slab", serif;
@@ -250,7 +253,7 @@ margin: 0;
 font-size: 2em;
 }
 .dots-container{
-  height: 20em;
+  height: 10em;
   background-image: url('./assets/Slide1-Photoroom.jpg');
   background-repeat:no-repeat;
   background-size:20em;
@@ -260,6 +263,10 @@ font-size: 2em;
 .dots-container:hover{
   animation: float 2s ease-in-out infinite;
 
+}
+.dots-texts{
+  text-align: center;
+  padding-right: 1.5em;
 }
 .dots-texts h1{
   font-size: 2em;
@@ -272,6 +279,35 @@ font-size: 2em;
 }
 .dots-image{
   display: none;
+}
+.notes-container{
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+}
+.notes-animation img{
+  height: 10em;
+}
+.notes-texts{
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8em;
+  width: 22em;
+}
+.buttons{
+   width:100%;
+  padding-bottom: 2em;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.Notes{
+display: flex;
+justify-content: center;
+align-items: center;
 }
  }
  

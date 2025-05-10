@@ -57,6 +57,13 @@ li{
    .rightheader-image{
     display: none;
    }
-  
+   .logo-container{  
+  gap: 45px;
+}
+  .minus{
+    left: -76%;
+    height: 15em;
+    width: 3em;
+}
   }
   
