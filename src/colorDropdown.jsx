@@ -25,7 +25,7 @@ function ColorDropdown() {
 
   return (
     <select className="dropdown" onChange={handleChange}>
-      <option value="">Select a Background Color</option>
+      <option value="">Select a Color</option>
       {colors.map(({ name, value }) => (
         <option key={value} value={value}>
           {name}
