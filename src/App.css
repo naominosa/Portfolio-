@@ -284,9 +284,9 @@ font-size: 2em;
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 80%;
   text-align: center;
-  margin-top:auto;
+  margin-top:7em;
 
 }
 .notes-animation img{
