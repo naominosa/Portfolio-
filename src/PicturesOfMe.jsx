@@ -31,9 +31,9 @@ const MyCarousel = () => {
                 <div>
                     <img src={pictureSix} alt="Slide 6" />
                 </div>
-                <div>
+                <div className='none'>
 
-                <video className='none' loop autoPlay muted width="100%" height="auto">
+                <video  loop autoPlay muted width="100%" height="auto">
     <source src={video} type="video/mp4" />
     Your browser does not support the video tag.
 </video>

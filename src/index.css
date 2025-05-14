@@ -55,6 +55,6 @@
 
 @media (max-width: 768px) {
 .lines{
-    padding-top: 2em;
+    display: none;
   }
 }
